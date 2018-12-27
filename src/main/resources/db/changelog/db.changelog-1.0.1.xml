@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+		
+	<changeSet id="1503460396396-56" author="Buse (generated)" runOnChange="true" >
+	<validCheckSum>7:8f7cabe095cd65a1e6322c6fe637f463</validCheckSum>
+		<insert tableName="employee_table">
+			<column name="employee_name" value="Buse"></column>
+			<column name="email" value="odacbuse@gmail.com"></column>
+			<column name="salary" valueNumeric="80000.00"></column>
+		</insert>
+		<insert tableName="employee_table">
+			<column name="employee_name" value="Buse"></column>
+			<column name="email" value="odacibuse@gmail.com"></column>
+			<column name="salary" valueNumeric="70000.00"></column>
+		</insert>
+		<insert tableName="employee_table">
+			<column name="employee_name" value="1.0.1 Yeni Bdggjfgjfgjfgjfgjfgjfgjfgjfgjuse"></column>
+			<column name="email" value="odacibuseeeee@gmail.com"></column>
+			<column name="salary" valueNumeric="70000.00"></column>
+		</insert>
+		
+	</changeSet>
+	
+	<changeSet id="1503460396396-78586" author="Buse (generated)" >
+		<insert tableName="employee_table">
+			<column name="employee_name" value="Buse"></column>
+			<column name="email" value="odacbuse@gmail.com"></column>
+			<column name="salary" valueNumeric="80000.00"></column>
+		</insert>
+		<insert tableName="employee_table">
+			<column name="employee_name" value="Buse"></column>
+			<column name="email" value="odacibuse@gmail.com"></column>
+			<column name="salary" valueNumeric="70000.00"></column>
+		</insert>
+		<insert tableName="employee_table">
+			<column name="employee_name" value="1.0.1 Yeni Bdggjfgjfgjfgjfgjfgjfgjfgjfgjuse"></column>
+			<column name="email" value="odacibuseeeee@gmail.com"></column>
+			<column name="salary" valueNumeric="70000.00"></column>
+		</insert>
+	</changeSet>
+	<changeSet author="userId" id="tag_version_1.0.1">
+        <tagDatabase tag="version_1.0.2" />
+    </changeSet>
+</databaseChangeLog>

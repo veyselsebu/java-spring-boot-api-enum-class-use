@@ -1,0 +1,57 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+	<changeSet author="Buse (generated)" id="addColumn">
+		<addColumn schemaName="public" tableName="employee_table">
+			<column name="address" type="varchar(255)" />
+			<column name="phone" type="varchar(255)" />
+		</addColumn>
+	</changeSet>
+
+	<changeSet author="Buse (generated)" id="createTable-City">
+		<createTable tableName="city_table">
+			<column autoIncrement="true" name="city_id" type="INT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="city" type="VARCHAR(255)" />
+
+			<column name="employee_id" type="INT">
+				<constraints nullable="false"
+					foreignKeyName="fk_city_employee"
+					references="employee_table(employee_id)" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet id="insertCity" author="Buse (generated)">
+		<insert tableName="city_table">
+			<column name="city" value="Adana"></column>
+			<column name="employee_id" value="5"></column>
+		</insert>
+	</changeSet>
+
+	<changeSet id="testRollback" author="baeldung">
+		<createTable tableName="baeldung_turorial">
+			<column name="id" type="int" />
+			<column name="heading" type="varchar(36)" />
+			<column name="author" type="varchar(36)" />
+		</createTable>
+		<rollback>
+			<dropTable tableName="baeldung_test" />
+		</rollback>
+	</changeSet>
+
+	<changeSet id="rollBackTest2" author="buse">
+		<createTable tableName="rollback2">
+			<column name="id" type="int" />
+		</createTable>
+	</changeSet>
+<changeSet author="userId" id="tag_version_1.03">
+        <tagDatabase tag="version_1.0.2" />
+    </changeSet>
+
+</databaseChangeLog>
